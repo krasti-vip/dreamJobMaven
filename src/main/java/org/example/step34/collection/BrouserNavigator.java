@@ -14,7 +14,7 @@ public class BrouserNavigator {
 
 
     public void visit(String page) {
-        if(currentPage != null) {
+        if (currentPage != null) {
             backStack.push(currentPage);
         }
         currentPage = page;
@@ -22,7 +22,7 @@ public class BrouserNavigator {
 
 
     public void back() {
-        if(!backStack.isEmpty()) {
+        if (!backStack.isEmpty()) {
             currentPage = backStack.pop();
         }
     }
