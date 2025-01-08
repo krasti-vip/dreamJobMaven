@@ -6,20 +6,21 @@ public class MapTask {
 
     /**
      * Дана строка текста, посчитать сколько раз каждое слово встречается, результат вернуть в HashMap.
+     *
      * @param text
      * @return
      */
     public HashMap<String, Integer> countWord(String text) {
-        if(text == null || text.isEmpty()) {
+        if (text == null || text.isEmpty()) {
             return new HashMap<>();
         }
 
         HashMap<String, Integer> wordCounts = new HashMap<>();
         String[] words = text.toLowerCase().split("\\s+");
 
-        for(String word : words) {
+        for (String word : words) {
             word = word.replaceAll("[^a-zA-Zа-яА-ЯёЁ]", "");
-            if(!word.isEmpty()) {
+            if (!word.isEmpty()) {
                 wordCounts.put(word, wordCounts.getOrDefault(word, 0) + 1);
             }
         }
@@ -29,6 +30,7 @@ public class MapTask {
     /**
      * Дана карта (HashMap) старых идентификаторов на новые. Дана коллекция старых идентификаторов, заменить их на новые, используя карту.
      * Пример: map={old1->new1, old2->new2}, список [old1,old2,old1] -> [new1,new2,new1].
+     *
      * @param oldId
      * @param idMap
      * @return
@@ -49,6 +51,7 @@ public class MapTask {
 
     /**
      * Дано: список "Продукт -> количество". Записать в HashMap и вывести суммарное количество каждого продукта.
+     *
      * @param productList
      * @return
      */
@@ -73,6 +76,7 @@ public class MapTask {
 
     /**
      * Хранить номера телефонов по ключу - имя человека, в TreeMap. Вывести все пары в алфавитном порядке ключей.
+     *
      * @param mapa
      * @return
      */
@@ -108,7 +112,7 @@ public class MapTask {
         }
 
         return stud;
-        }
+    }
 
     /**
      * Заполнить TreeMap парой (числовой ключ -> значение). Вывести в порядке ключей и найти ключ ближайший к данному числу.
@@ -116,7 +120,7 @@ public class MapTask {
 
     public Integer nearest(TreeMap<Integer, String> map, Integer order) {
 
-        if(map == null || map.isEmpty()) {
+        if (map == null || map.isEmpty()) {
             return 000;
         }
 
