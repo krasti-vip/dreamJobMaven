@@ -1,4 +1,4 @@
-package org.example.lesson03012025;
+package org.example.lesson.lesson03012025;
 
 public class ThreadOne implements Runnable {
 
