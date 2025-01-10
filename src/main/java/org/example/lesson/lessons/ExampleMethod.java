@@ -1,4 +1,4 @@
-package org.example.lessons;
+package org.example.lesson.lessons;
 
 
 public class ExampleMethod {
