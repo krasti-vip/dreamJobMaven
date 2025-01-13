@@ -1,4 +1,4 @@
-package org.example.lection;
+package org.example.lesson.lection;
 
 import lombok.Data;
 
